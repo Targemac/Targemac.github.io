@@ -1,0 +1,9 @@
+.testimonial-wrapper {
+  color: #2a2a2a;
+}
+.testimonial-header {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 48px;
+  padding: 2.5rem 0;
+}

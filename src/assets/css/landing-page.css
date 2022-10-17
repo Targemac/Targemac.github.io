@@ -1,0 +1,105 @@
+.landing-wrapper {
+  /* background-color: rgb(63, 63, 158); */
+  height: 100vh;
+  background: url(../images/office1.jpg);
+  background-size: contain;
+}
+.wrapper-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+}
+.landing-wrapper-header {
+  /* height: 10vh; */
+  border-bottom: 0.2px solid white;
+  display: grid;
+  grid-template-columns: auto 30%;
+  justify-content: space-between;
+  padding: 1%;
+}
+.logo-space a {
+  /* background-color: aqua; */
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.logo-space a i {
+  color: rgb(57, 247, 174);
+  font-weight: normal;
+  background: linear-gradient(90deg, #ef74ff, #4a00e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo {
+  width: 50px;
+}
+.head-btn-space {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-evenly;
+}
+.get-started-btn {
+  background-color: rgb(8, 64, 148);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 18px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.get-started-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(8, 64, 148);
+}
+.login-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(8, 64, 148);
+}
+.intro {
+  color: white;
+  margin: 10rem auto;
+  width: 50%;
+  /* border: 1px solid; */
+  text-align: center;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+.intro p:first-of-type {
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ef74ff, #4a00e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro p a {
+  background-color: rgb(8, 64, 148);
+  text-decoration: none;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.intro p a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(8, 64, 148);
+}
