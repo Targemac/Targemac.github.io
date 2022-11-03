@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* width: 100vw; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* background-color: rgb(195, 71, 91); */
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    to left,
+    rgb(15, 30, 74, 0.9),
+    rgb(69, 24, 31, 0.9),
+    rgb(15, 30, 74, 0.9),
+    rgb(15, 30, 74, 0.9)
+  );
   color: white;
+  /* padding: 0 2rem; */
+  /* margin: 0rem 2rem; */
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
 }
-
-.App-link {
-  color: #61dafb;
+.logo-box {
+  font-size: 24px;
+  margin-left: 1rem;
+  /* background: linear-gradient(rgb(249, 251, 249), rgb(255, 255, 255)); */
+  /* background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  font-weight: 4000;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-box {
+  /* background-color: rgb(39, 38, 38); */
+  display: flex;
+}
+.nav-box a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+.nav-box a:hover {
+  background: linear-gradient(rgb(195, 71, 91), rgb(238, 103, 125));
+}
+a[download] {
+  background: linear-gradient(rgb(2, 117, 4), rgb(5, 159, 8));
+}
+/* mobile screen */
+@media screen and (max-width: 768px) {
+  .nav-box {
+    background-color: rgb(39, 38, 38);
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .nav-box-2 {
+    background-color: rgb(39, 38, 38);
+    display: none;
+    /* margin: 0rem auto; */
+  }
+  .nav-box-2 a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    /* width: 100%; */
+    display: block;
+  }
+  .nav-box-2 a:hover {
+    background: linear-gradient(rgb(195, 71, 91), rgb(238, 103, 125));
+  }
+  a[download] {
+    background: linear-gradient(rgb(2, 117, 4), rgb(5, 159, 8));
+  }
+  .toggle-btn-box {
+    font-size: 48px;
+    cursor: pointer;
+    transform: rotateX(45deg);
+  }
+}
+
+/* laptop screen  */
+@media screen and (min-width: 768px) {
+  .toggle-btn-box {
+    display: none;
+    font-size: 48px;
+    cursor: pointer;
+    transform: rotateX(45deg);
+  }
+  .nav-box-2 {
+    display: none;
+  }
+
+  /* INTRO BANNER STARTS */
+  .IntroBanner {
+    background: url(./assets/img/banner-bg.png);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hobbies {
+    display: flex;
+    justify-content: center;
+  }
+  .hobbie {
+    margin: 0 2rem;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+
+    text-shadow: (1px 1px 25px white);
+  }
+  .introText {
+    font-size: 80px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 15px 2px 25px rgb(44, 88, 218);
+    /* font-variant-caps:unicase; */
+    /* font-variant: small-caps; */
+    /* transform: scaleY(5) */
+  }
+  .introText-sub {
+    font-size: 20px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: rgb(184, 182, 182);
+    font-style: italic;
+    padding: 2rem;
+  }
+  /* INTRO BANNER ENDS */
+
+  /* ----------------PersonalSummary */
+
+  .PersonalSummary {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    align-items: center;
+  }
+  .PersonalSummary-sub-1 {
+    flex: 1 1 30rem;
+    /* background-color: blueviolet; */
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    /* align-items: center; */
+    /* justify-content:space-evenly */
+  }
+  .p-s-s-1-title {
+    font-size: 36px;
+    text-transform: capitalize;
+    background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118));
+    font-weight: bold;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .p-s-s-1-body {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 2rem;
+  }
+  .custome-quote {
+    color: lightgray;
+    font-size: 24px;
+  }
+  .p-s-s-1-btn {
+    width: 100%;
+  }
+  .p-s-s-1-btn button {
+    /* width: 50%; */
+    font-size: 24px;
+    padding: 0.5rem 2rem;
+    text-transform: capitalize;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118));
+  }
+  .p-s-s-1-btn button:hover {
+    background: linear-gradient(rgb(59, 81, 118), rgb(44, 88, 218));
+  }
+
+  .PersonalSummary-sub-2 {
+    flex: 1 1 30rem;
+    /* background-color: rgb(43, 226, 144); */
+    display: flex;
+  }
+  .PersonalSummary-sub-2 img {
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  /* LANGUAGES START */
+  .languages {
+    display: flex;
+    grid-template-columns: repeat(10, 100px);
+    justify-content: center;
+    align-items: center;
+    /* background: url(./assets/img/banner-bg.png); */
+    /* padding: 10rem 0; */
+    flex-wrap: wrap;
+    margin: 0 4rem;
+    height: 100vh;
+  }
+  .language {
+    /* width: 200px; */
+    /* height: 100px; */
+    border-radius: 50%;
+    border: solid 2px #ffffff;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(250, 250, 250, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100px;
+  }
+  .language {
+    font-size: 60px;
+    color: rgb(44, 88, 218);
+  }
+  .language:hover {
+    transform: scale(1.5);
+  }
+  /* LANGUAGES END */
+  /* ---------------- PROJECTS START HERE  */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: flex-start;
+    gap: 4rem;
+    /* flex-wrap: wrap; */
+    /* overflow: auto; */
+    /* scroll-snap-type: x mandatory; */
+    padding: 2rem 2rem;
+    /* row-gap: 4rem; */
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    /* background-color:lightgray; */
+  }
+  .project-box {
+    /* background-color: lightgray; */
+    box-shadow: 0px -2px 25px rgb(180, 178, 178);
+    padding: 0 0 2rem 0 0;
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 5px;
+    /* flex: 0 1 300px; */
+    /* scroll-snap-align: center; */
+    /* scrollbar-width: 0.5px; */
+    row-gap: 1.5rem;
+    margin: 0 auto;
+  }
+  .project-box > a {
+    text-decoration: none;
+  }
+  .project-box-title {
+    font-size: 28px;
+    text-transform: capitalize;
+    padding: 0 2rem;
+    display: inline-block;
+    color: rgb(44, 88, 218);
+  }
+  .project-box-title:hover {
+    text-decoration: underline;
+  }
+  .project-box-img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: antiquewhite; */
+    /* padding: 0 2rem; */
+  }
+  .project-box-img img {
+    width: 100%;
+    transition: all 0.3s ease;
+    /* filter: brightness(.5); */
+    min-width:  100%;
+  }
+  .project-box-img img:hover {
+    scale: 1.5;
+    filter: brightness(1);
+  }
+  .project-box-desc {
+    padding: 0 2rem;
+    /* height: 200px; */
+    /* background-color: rgb(146, 145, 144, 0.4); */
+  }
+
+  .project-box-action-box {
+    padding: 0 2rem;
+    width: 100%;
+  }
+  .project-box-action-box a {
+    width: 100%;
+    text-decoration: none;
+    /* font-size: 18px; */
+    padding: 0.5rem 2rem;
+    text-transform: capitalize;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118));
+    /* opacity: 0.8; */
+  }
+  .project-box-action-box a:hover {
+    background: linear-gradient(rgb(59, 81, 118), rgb(44, 88, 218));
+  }
+  /* ---------------- PROJECTS END HERE  */
+
+  /*--------------------------- page wrapper  */
+  .page-wrapper {
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  /*-------------------------- MAIN CONTETNT  */
+  .main-content {
+    /* width: 70%; */
+    padding: 2rem;
+    flex: 1 1 40rem;
+    background-color: aqua;
+  }
+  /*-------------------------- SIDE CONTENT  */
+  .side-content {
+    background-color: lightgray;
+    width: 30%;
+    /* flex: 0 1 ; */
+    padding: 2rem;
+    /* line-height: 2rem; */
+    color: #2f2f2f;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+  }
+  .side-head-1 {
+    font-size: 28px;
+    color: rgb(51, 59, 92);
+  }
+  .side-head-2 {
+    font-size: 24px;
+    padding-left: 2rem;
+    text-transform: capitalize;
+    color: rgb(51, 59, 92);
+  }
+  .side-body {
+    font-size: 16px;
+    padding-left: 4rem;
+  }
+
+  /* ---------------------------FOOTER  */
+  .footer {
+    text-align: center;
+    padding: 2rem;
   }
 }
