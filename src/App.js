@@ -17,10 +17,9 @@ function App() {
       <Header />
       <IntroBanner />
       <PersonalSummary />
-      <Languages />
       {/* <Projects /> */}
       <Home />
-
+      <Languages />
       <Footer />
     </div>
   );
