@@ -1,11 +1,9 @@
 import React from "react";
-import { FaCode, FaBook, FaUser } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import data from "../js/data";
 
 const SideContent = (props) => {
   const techSkills = data.tech_skills;
-  const education = data.education;
-  const personal_det = data.personal_details;
 
   return (
     <div className="side-content">
