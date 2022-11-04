@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import PersonalSummary from "./components/PersonalSummary";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import Languages from "./components/Languages";
 import IntroBanner from "./components/IntroBanner";
 
@@ -18,7 +18,7 @@ function App() {
       <IntroBanner />
       <PersonalSummary />
       <Languages />
-      <Projects />
+      {/* <Projects /> */}
       <Home />
 
       <Footer />
