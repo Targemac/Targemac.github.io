@@ -1,3 +1,11 @@
+@font-face {
+  font-family: oxygen_font;
+  src: url("./assets/font/Oxygen-Regular.ttf");
+}
+
+* {
+  font-family: oxygen_font;
+}
 /* mobile screen */
 @media screen and (max-width: 768px) {
   .main-header {
@@ -21,7 +29,7 @@
     z-index: 99999;
   }
   .logo-box {
-    font-size: 24px;
+    font-size: 16px;
     margin-left: 2rem;
     /* background: linear-gradient(rgb(249, 251, 249), rgb(255, 255, 255)); */
     /* background-clip: text; */
@@ -70,6 +78,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   .hobbies {
     display: flex;
@@ -81,7 +90,7 @@
     color: rgb(255, 255, 255);
   }
   .introText {
-    font-size: 40px;
+    font-size: 28px;
     text-transform: capitalize;
     display: flex;
     text-align: center;
@@ -110,6 +119,7 @@
     flex-wrap: wrap;
     padding: 2rem 0;
     align-items: center;
+    height: 100vh;
   }
   .PersonalSummary-sub-1 {
     flex: 1 1 30rem;
@@ -128,7 +138,7 @@
   }
   .p-s-s-1-body {
     font-size: 16px;
-    font-style: italic;
+    /* font-style: italic; */
     line-height: 2rem;
     text-align: justify;
   }
@@ -172,7 +182,8 @@
   }
   /* LANGUAGES START */
   .languages {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
     justify-content: center;
     align-items: center;
@@ -200,9 +211,9 @@
     font-size: 28px;
     color: rgb(44, 88, 218);
   }
-  .language:hover {
+  /* .language:hover {
     transform: scale(1.5);
-  }
+  } */
   /* LANGUAGES END */
   /* ---------------- PROJECTS START HERE  */
   .projects {
@@ -306,9 +317,13 @@
     background-color: aqua;
   }
   /*-------------------------- SIDE CONTENT  */
-  .side-content {
+  /* .side-content {
+  } */
+  .side-cont-wrapper {
     /* background-color: lightgray; */
     /* width: 30%; */
+    height: 100vh;
+    justify-content: center;
     flex: 1 1;
     padding: 2rem 1rem;
     /* line-height: 2rem; */
@@ -316,6 +331,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 5.275);
   }
   .side-head-1 {
     font-size: 24px;
@@ -323,6 +340,7 @@
   .techskill-grp {
     display: grid;
     grid-template-columns: 50% 50%;
+    /* grid-auto-flow: row; */
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -341,7 +359,7 @@
   }
   .side-body {
     font-size: 16px;
-    font-style: italic;
+    /* font-style: italic; */
   }
 
   /* ---------------------------FOOTER  */
@@ -378,12 +396,12 @@
     z-index: 99999;
   }
   .logo-box {
-    font-size: 24px;
+    font-size: 16px;
     margin-left: 1rem;
     /* background: linear-gradient(rgb(249, 251, 249), rgb(255, 255, 255)); */
     /* background-clip: text; */
     /* -webkit-text-fill-color: transparent; */
-    font-weight: 4000;
+    /* font-weight: 4000; */
   }
   .nav-box {
     /* background-color: rgb(39, 38, 38); */
@@ -463,6 +481,7 @@
     flex-wrap: wrap;
     padding: 2rem 0;
     align-items: center;
+    height: 100vh;
   }
   .PersonalSummary-sub-1 {
     flex: 1 1 30rem;
@@ -475,28 +494,30 @@
     /* justify-content:space-evenly */
   }
   .p-s-s-1-title {
-    font-size: 36px;
+    font-size: 24px;
     text-transform: capitalize;
-    background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118));
-    font-weight: bold;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118)); */
+    /* font-weight: bold; */
+    /* background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    color: #2f2f2f;
   }
   .p-s-s-1-body {
-    font-size: 18px;
-    font-style: italic;
+    font-size: 16px;
+    /* font-style: italic; */
     line-height: 2rem;
+    text-align: justify;
   }
   .custome-quote {
     color: lightgray;
-    font-size: 24px;
+    font-size: 12px;
   }
   .p-s-s-1-btn {
     width: 100%;
   }
   .p-s-s-1-btn button {
     /* width: 50%; */
-    font-size: 24px;
+    font-size: 16px;
     padding: 0.5rem 2rem;
     text-transform: capitalize;
     color: white;
@@ -521,24 +542,27 @@
   }
   /* LANGUAGES START */
   .languages {
-    display: flex;
-    grid-template-columns: repeat(10, 100px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
     justify-content: center;
     align-items: center;
     /* background: url(./assets/img/banner-bg.png); */
     /* padding: 10rem 0; */
     flex-wrap: wrap;
-    margin: 0 4rem;
-    height: 50vh;
+    /* margin: 0 4rem; */
+    /* height: 50vh; */
+    gap: 2rem;
+    padding: 0 2rem;
   }
   .language {
     /* width: 200px; */
     /* height: 100px; */
     border-radius: 50%;
-    border: solid 2px #ffffff;
-    transition: all 0.3s ease-in-out;
-    background-color: rgb(250, 250, 250, 0.2);
-    backdrop-filter: blur(5px);
+    /* border: solid 2px #ffffff; */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 5.275);
+    /* background-color: rgb(250, 250, 250, 0.2); */
+    /* backdrop-filter: blur(5px); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -549,8 +573,10 @@
     color: rgb(44, 88, 218);
   }
   .language:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
+    rotate: -5deg;
   }
+
   /* LANGUAGES END */
   /* ---------------- PROJECTS START HERE  */
   .projects {
@@ -654,8 +680,16 @@
     background-color: aqua;
   }
   /*-------------------------- SIDE CONTENT  */
-  .side-content {
-    /* background-color: lightgray; */
+  /* .side-content {
+    background: repeating-linear-gradient(
+      50deg,
+      white,
+      rgb(244, 241, 241),
+      white
+    );
+  } */
+  .side-cont-wrapper {
+    /* background-color: rgb(173, 189, 230); */
     /* width: 30%; */
     flex: 1 1;
     padding: 2rem;
@@ -664,36 +698,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     /* flex-wrap: wrap; */
+    height: 100vh;
   }
   .side-head-1 {
-    font-size: 28px;
-    color: rgb(44, 88, 218);
+    font-size: 24px;
   }
   .techskill-grp {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    justify-items: center;
     width: 100%;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    row-gap: 2rem;
   }
   .techskill {
-    flex: 1 1 250px;
+    flex: 1 0;
     text-align: center;
   }
   .side-head-2 {
-    font-size: 24px;
-    padding: 2rem 0;
+    font-size: 16px;
+    font-weight: bold;
+    /* padding: 2rem 0; */
     text-transform: capitalize;
-    color: #111111;
+    /* color: #111111; */
   }
   .side-body {
     font-size: 16px;
-    font-style: italic;
+    /* font-style: italic; */
+    
   }
 
   /* ---------------------------FOOTER  */
   .footer {
     text-align: center;
     padding: 2rem;
+    color: gray;
+    font-size: 12px;
   }
 }

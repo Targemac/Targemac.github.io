@@ -10,6 +10,7 @@ import PersonalSummary from "./components/PersonalSummary";
 // import Projects from "./components/Projects";
 import Languages from "./components/Languages";
 import IntroBanner from "./components/IntroBanner";
+import SideContent from "./components/SideContent";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <PersonalSummary />
       {/* <Projects /> */}
       <Home />
+      <SideContent/>
       <Languages />
       <Footer />
     </div>

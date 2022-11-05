@@ -13,21 +13,19 @@ import {
   FaAlignJustify,
 } from "react-icons/fa";
 
-
-
 const Header = () => {
   const handleToggle = () => {
     $(".nav-box-2").slideToggle();
   };
 
-  $(".scroll-position").text("scrollTop: " + $(".IntroBanner").scrollTop());
+  
 
   return (
     <>
       <header className="main-header">
         <div className="logo-box">Targema Charles</div>
         <nav className="nav-box">
-          <div className="scroll-position"></div>
+         
           <a
             href="https://github.com/Targemac"
             rel="noreferrer"
@@ -58,10 +56,15 @@ const Header = () => {
           <a href="tel:+2348097866451" rel="noreferrer" target="_blank">
             <FaPhone />
           </a>
-          <a href="/" rel="noreferrer" target="_blank">
+          <a  href="/" rel="noreferrer" target="_blank">
             <FaLocationArrow /> Abuja, Nigeria
           </a>
-          <a href="/" download="../assets/web-dev cv.pdf">
+          <a
+            href="/"
+            download="../assets/web-dev cv.pdf"
+            rel="noreferrer"
+            target="_blank"
+          >
             <FaDownload /> Download CV
           </a>
         </nav>
