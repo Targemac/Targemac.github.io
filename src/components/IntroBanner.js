@@ -5,7 +5,7 @@ import {
   FaBookReader,
   FaBed,
   FaQuoteLeft,
-  FaQuoteRight,FaMusic
+  FaQuoteRight,
 } from "react-icons/fa";
 
 const IntroBanner = () => {
@@ -28,7 +28,7 @@ const IntroBanner = () => {
       <div className="introText">full stack web developer</div>
       <div className="introText-sub">
         {" "}
-        <FaQuoteLeft /> <FaMusic/> can't burn the bridge just to light my way{" "}
+        <FaQuoteLeft /> &nbsp; can't burn the bridge just to light my way &nbsp;
         <FaQuoteRight />{" "}
       </div>
     </div>

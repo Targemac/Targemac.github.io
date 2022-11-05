@@ -3,7 +3,6 @@
   .main-header {
     display: flex;
     justify-content: space-between;
-    /* width: 100vw; */
     align-items: center;
     /* background-color: rgb(195, 71, 91); */
     backdrop-filter: blur(10px);
@@ -15,7 +14,7 @@
       rgb(15, 30, 74, 0.9)
     );
     color: white;
-    /* padding: 0 2rem; */
+    padding: 1rem 0;
     /* margin: 0rem 2rem; */
     position: fixed;
     width: 100%;
@@ -23,11 +22,11 @@
   }
   .logo-box {
     font-size: 24px;
-    margin-left: 1rem;
+    margin-left: 2rem;
     /* background: linear-gradient(rgb(249, 251, 249), rgb(255, 255, 255)); */
     /* background-clip: text; */
     /* -webkit-text-fill-color: transparent; */
-    font-weight: 4000;
+    /* font-weight: 4000; */
   }
 
   .nav-box {
@@ -38,6 +37,9 @@
     background-color: rgb(39, 38, 38);
     display: none;
     /* margin: 0rem auto; */
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
   }
   .nav-box-2 a {
     color: white;
@@ -45,6 +47,7 @@
     padding: 1rem;
     /* width: 100%; */
     display: block;
+    font-size: 16px;
   }
   .nav-box-2 a:hover {
     background: linear-gradient(rgb(195, 71, 91), rgb(238, 103, 125));
@@ -53,9 +56,10 @@
     background: linear-gradient(rgb(2, 117, 4), rgb(5, 159, 8));
   }
   .toggle-btn-box {
-    font-size: 48px;
+    font-size: 24px;
     cursor: pointer;
     transform: rotateX(45deg);
+    margin-right: 2rem;
   }
   /* INTRO BANNER STARTS */
   .IntroBanner {
@@ -73,13 +77,11 @@
   }
   .hobbie {
     margin: 0 2rem;
-    font-size: 60px;
+    font-size: 16px;
     color: rgb(255, 255, 255);
-
-    text-shadow: (1px 1px 25px white);
   }
   .introText {
-    font-size: 80px;
+    font-size: 40px;
     text-transform: capitalize;
     display: flex;
     text-align: center;
@@ -87,16 +89,14 @@
     color: white;
     font-weight: bold;
     text-shadow: 15px 2px 25px rgb(44, 88, 218);
-    /* font-variant-caps:unicase; */
-    /* font-variant: small-caps; */
-    /* transform: scaleY(5) */
   }
   .introText-sub {
-    font-size: 20px;
+    font-size: 12px;
     text-transform: capitalize;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    /* gap: 2rem; */
+    text-align: center;
     color: rgb(184, 182, 182);
     font-style: italic;
     padding: 2rem;
@@ -114,7 +114,7 @@
   .PersonalSummary-sub-1 {
     flex: 1 1 30rem;
     /* background-color: blueviolet; */
-    padding: 0 4rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -122,28 +122,26 @@
     /* justify-content:space-evenly */
   }
   .p-s-s-1-title {
-    font-size: 36px;
+    font-size: 24px;
     text-transform: capitalize;
-    background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118));
-    font-weight: bold;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #2f2f2f;
   }
   .p-s-s-1-body {
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
     line-height: 2rem;
+    text-align: justify;
   }
   .custome-quote {
     color: lightgray;
-    font-size: 24px;
+    font-size: 16px;
   }
   .p-s-s-1-btn {
     width: 100%;
   }
   .p-s-s-1-btn button {
     /* width: 50%; */
-    font-size: 24px;
+    font-size: 16px;
     padding: 0.5rem 2rem;
     text-transform: capitalize;
     color: white;
@@ -163,20 +161,27 @@
   }
   .PersonalSummary-sub-2 img {
     width: 100%;
-    max-width: 50%;
+    max-width: 160px;
     margin: 0 auto;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .PersonalSummary-sub-2 img:active {
+    transform: perspective("35deg");
+    scale: 1.5;
+    /* width: 100vw; */
   }
   /* LANGUAGES START */
   .languages {
     display: flex;
-    grid-template-columns: repeat(10, 100px);
+
     justify-content: center;
     align-items: center;
     /* background: url(./assets/img/banner-bg.png); */
     /* padding: 10rem 0; */
     flex-wrap: wrap;
-    margin: 0 4rem;
-    height: 50vh;
+    /* margin: 0 4rem; */
+    /* height: 50vh; */
+    gap: 2rem;
   }
   .language {
     /* width: 200px; */
@@ -189,10 +194,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 1 100px;
+    flex: 1 1 80px;
   }
   .language {
-    font-size: 60px;
+    font-size: 28px;
     color: rgb(44, 88, 218);
   }
   .language:hover {
@@ -290,7 +295,7 @@
   /*--------------------------- page wrapper  */
   .page-wrapper {
     display: flex;
-    padding: 2rem;
+    /* padding: 2rem; */
     flex-wrap: wrap;
   }
   /*-------------------------- MAIN CONTETNT  */
@@ -305,33 +310,34 @@
     /* background-color: lightgray; */
     /* width: 30%; */
     flex: 1 1;
-    padding: 2rem;
+    padding: 2rem 1rem;
     /* line-height: 2rem; */
     color: #2f2f2f;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* flex-wrap: wrap; */
   }
   .side-head-1 {
-    font-size: 28px;
-    color: rgb(44, 88, 218);
+    font-size: 24px;
   }
   .techskill-grp {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
+    row-gap: 2rem;
+    padding: 2rem 0;
   }
   .techskill {
-    flex: 1 1 250px;
+    flex: 1 1;
     text-align: center;
   }
   .side-head-2 {
-    font-size: 24px;
-    padding: 2rem 0;
+    font-size: 16px;
+    padding: 0rem 0;
     text-transform: capitalize;
-    color: #111111;
+    font-weight: bold;
   }
   .side-body {
     font-size: 16px;
@@ -342,6 +348,9 @@
   .footer {
     text-align: center;
     padding: 2rem;
+    font-size: 12px;
+    color: gray;
+    padding: 4rem 0;
   }
 }
 
