@@ -22,8 +22,9 @@ const PersonalSummary = () => {
           <button>Hire me today</button>
         </div>
       </div>
-      <div className="PersonalSummary-sub-2">
+      <div className="PersonalSummary-sub-2 ">
         <img src={photo} alt="" />
+        
       </div>
     </div>
   );

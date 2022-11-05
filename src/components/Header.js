@@ -18,14 +18,13 @@ const Header = () => {
     $(".nav-box-2").slideToggle();
   };
 
-  
-
   return (
     <>
       <header className="main-header">
-        <div className="logo-box">Targema Charles</div>
+        <div className="logo-box">
+          <a href="/">Targema Charles</a>{" "}
+        </div>
         <nav className="nav-box">
-         
           <a
             href="https://github.com/Targemac"
             rel="noreferrer"
@@ -56,7 +55,7 @@ const Header = () => {
           <a href="tel:+2348097866451" rel="noreferrer" target="_blank">
             <FaPhone />
           </a>
-          <a  href="/" rel="noreferrer" target="_blank">
+          <a href="/" rel="noreferrer" target="_blank">
             <FaLocationArrow /> Abuja, Nigeria
           </a>
           <a

@@ -2,6 +2,10 @@
   font-family: oxygen_font;
   src: url("./assets/font/Oxygen-Regular.ttf");
 }
+@font-face {
+  font-family: heading-text;
+  src: url("./assets/font/Barlow-Regular.ttf");
+}
 
 * {
   font-family: oxygen_font;
@@ -36,7 +40,10 @@
     /* -webkit-text-fill-color: transparent; */
     /* font-weight: 4000; */
   }
-
+  .logo-box a {
+    color: white;
+    text-decoration: none;
+  }
   .nav-box {
     background-color: rgb(39, 38, 38);
     display: none;
@@ -219,67 +226,95 @@
   /* LANGUAGES END */
   /* ---------------- PROJECTS START HERE  */
   .projects {
+    padding: 4rem 2rem;
+    background-color: rgba(211, 211, 211, 0.515);
+  }
+  .projects-head {
+    font-family: heading-text;
+    text-align: center;
+    font-size: 24px;
+    /* text-shadow: 9px 9px 25px   rgb(59, 81, 118); */
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    padding: 4rem 0;
+    /* color: rgb(59, 81, 118); */
+    background: linear-gradient(
+      45deg,
+      rgb(59, 81, 118),
+      rgb(59, 81, 118),
+      rgb(243, 144, 144) 20%,
+      rgb(59, 81, 118)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  .project-grp {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: flex-start;
     gap: 4rem;
-    /* flex-wrap: wrap; */
-    /* overflow: auto; */
-    /* scroll-snap-type: x mandatory; */
-    padding: 2rem 2rem;
-    /* row-gap: 4rem; */
-    /* width: 100%; */
-    /* margin: 0 auto; */
-    /* background-color:lightgray; */
   }
   .project-box {
-    /* background-color: lightgray; */
     box-shadow: 0px -2px 25px rgb(180, 178, 178);
-    padding: 0 0 2rem 0 0;
-    /* width: 50%; */
-    display: flex;
-    flex-direction: column;
+    /* border: .5px solid rgba(59, 81, 118, 0.217); */
+    background-color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
     align-items: stretch;
-    border-radius: 5px;
-    /* flex: 0 1 300px; */
-    /* scroll-snap-align: center; */
-    /* scrollbar-width: 0.5px; */
+    border-radius: 15px;
     row-gap: 1.5rem;
     margin: 0 auto;
+    overflow: hidden;
   }
   .project-box > a {
     text-decoration: none;
   }
   .project-box-title {
-    font-size: 28px;
+    font-size: 16px;
+    font-weight: bold;
     text-transform: capitalize;
-    padding: 0 2rem;
-    display: inline-block;
-    color: rgb(44, 88, 218);
+    padding: 2rem 2rem;
+    /* display: block; */
+    height: 50px;
+    color: rgb(59, 81, 118);
+    overflow-inline: clip;
+    text-overflow: ellipsis;
   }
   .project-box-title:hover {
     text-decoration: underline;
+  }
+  .project-number {
+    color: white;
+    display: inline-block;
+    background-color: rgb(59, 81, 118);
+    border-radius: 5px;
+    padding: 1% 3%;
+    /* rotate: -20deg; */
   }
   .project-box-img {
     height: 200px;
     width: 100%;
     overflow: hidden;
-    /* background-color: antiquewhite; */
-    /* padding: 0 2rem; */
+    box-shadow: 1px 2px 15px #2f2f2f;
   }
   .project-box-img img {
     width: 100%;
-    transition: all 0.3s ease;
-    /* filter: brightness(.5); */
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+    /* filter: brightness(.8); */
     min-width: 100%;
   }
   .project-box-img img:hover {
-    scale: 1.5;
+    scale: 1.2;
     filter: brightness(1);
   }
+  .project-box-img:hover {
+    z-index: 555;
+  }
+
   .project-box-desc {
     padding: 0 2rem;
-    /* height: 200px; */
+    text-align: justify;
+    height: 200px;
     /* background-color: rgb(146, 145, 144, 0.4); */
   }
 
@@ -302,6 +337,25 @@
   }
   .project-box-action-box a:hover {
     background: linear-gradient(rgb(59, 81, 118), rgb(44, 88, 218));
+  }
+  .project-progress-bar {
+    font-size: 10px;
+    padding: 2rem 0;
+    /* text-align: center; */
+    padding-left: 2rem;
+    background-color: rgba(147, 146, 147, 0.278);
+  }
+  .progress-bar-InProgress {
+    color: rgb(195, 71, 91);
+    background-color: rgba(195, 71, 92, 0.278);
+    padding: 2%;
+    border-radius: 5px;
+  }
+  .progress-bar-completed {
+    color: rgb(2, 117, 4);
+    background-color: rgba(2, 117, 4, 0.285);
+    padding: 2%;
+    border-radius: 5px;
   }
   /* ---------------- PROJECTS END HERE  */
 
@@ -337,7 +391,24 @@
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 5.275);
   }
   .side-head-1 {
+    font-family: heading-text;
+    text-align: center;
     font-size: 24px;
+    /* text-shadow: 9px 9px 25px   rgb(59, 81, 118); */
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    padding: 4rem 0;
+    /* color: rgb(59, 81, 118); */
+    background: linear-gradient(
+      45deg,
+      rgb(59, 81, 118),
+      rgb(59, 81, 118),
+      rgb(243, 144, 144) 20%,
+      rgb(59, 81, 118)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
   }
   .techskill-grp {
     display: grid;
@@ -368,9 +439,29 @@
   .footer {
     text-align: center;
     padding: 2rem;
-    font-size: 12px;
     color: gray;
-    padding: 4rem 0;
+    font-size: 12px;
+    /* letter-spacing: 0.2rem; */
+    text-transform: capitalize;
+  }
+  /* -------------ScrollToTop00 */
+  .ScrollToTop {
+    background-color: rgba(47, 47, 47, 0.353);
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    position: fixed;
+    right: 25px;
+    z-index: 9999;
+    bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    filter: sepia(25px);
+  }
+  .ScrollToTop:hover {
+    background-color: rgba(47, 47, 47, 0.753);
+    scale: 1.2;
   }
 }
 
@@ -404,6 +495,10 @@
     /* background-clip: text; */
     /* -webkit-text-fill-color: transparent; */
     /* font-weight: 4000; */
+  }
+  .logo-box a {
+    color: white;
+    text-decoration: none;
   }
   .nav-box {
     /* background-color: rgb(39, 38, 38); */
@@ -459,6 +554,7 @@
     justify-content: center;
     color: white;
     font-weight: bold;
+    font-family: heading-text;
     text-shadow: 15px 2px 25px rgb(44, 88, 218);
     /* font-variant-caps:unicase; */
     /* font-variant: small-caps; */
@@ -480,10 +576,10 @@
 
   .PersonalSummary {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding: 2rem 0;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
   }
   .PersonalSummary-sub-1 {
     flex: 1 1 30rem;
@@ -555,7 +651,7 @@
     /* margin: 0 4rem; */
     /* height: 50vh; */
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 5rem 2rem;
   }
   .language {
     /* width: 200px; */
@@ -582,67 +678,95 @@
   /* LANGUAGES END */
   /* ---------------- PROJECTS START HERE  */
   .projects {
+    padding: 4rem 2rem;
+    background-color: rgba(211, 211, 211, 0.515);
+  }
+  .projects-head {
+    font-family: heading-text;
+    text-align: center;
+    font-size: 64px;
+    /* text-shadow: 9px 9px 25px   rgb(59, 81, 118); */
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    padding: 4rem 0;
+    /* color: rgb(59, 81, 118); */
+    background: linear-gradient(
+      45deg,
+      rgb(59, 81, 118),
+      rgb(59, 81, 118),
+      rgb(243, 144, 144) 20%,
+      rgb(59, 81, 118)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  .project-grp {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: flex-start;
     gap: 4rem;
-    /* flex-wrap: wrap; */
-    /* overflow: auto; */
-    /* scroll-snap-type: x mandatory; */
-    padding: 2rem 2rem;
-    /* row-gap: 4rem; */
-    /* width: 100%; */
-    /* margin: 0 auto; */
-    /* background-color:lightgray; */
   }
   .project-box {
-    /* background-color: lightgray; */
     box-shadow: 0px -2px 25px rgb(180, 178, 178);
-    padding: 0 0 2rem 0 0;
-    /* width: 50%; */
-    display: flex;
-    flex-direction: column;
+    /* border: .5px solid rgba(59, 81, 118, 0.217); */
+    background-color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
     align-items: stretch;
-    border-radius: 5px;
-    /* flex: 0 1 300px; */
-    /* scroll-snap-align: center; */
-    /* scrollbar-width: 0.5px; */
+    border-radius: 15px;
     row-gap: 1.5rem;
     margin: 0 auto;
+    overflow: hidden;
   }
   .project-box > a {
     text-decoration: none;
   }
   .project-box-title {
-    font-size: 28px;
+    font-size: 16px;
+    font-weight: bold;
     text-transform: capitalize;
-    padding: 0 2rem;
-    display: inline-block;
-    color: rgb(44, 88, 218);
+    padding: 2rem 2rem;
+    /* display: block; */
+    height: 50px;
+    color: rgb(59, 81, 118);
+    overflow-inline: clip;
+    text-overflow: ellipsis;
   }
   .project-box-title:hover {
     text-decoration: underline;
+  }
+  .project-number {
+    color: white;
+    display: inline-block;
+    background-color: rgb(59, 81, 118);
+    border-radius: 5px;
+    padding: 1% 3%;
+    /* rotate: -20deg; */
   }
   .project-box-img {
     height: 200px;
     width: 100%;
     overflow: hidden;
-    /* background-color: antiquewhite; */
-    /* padding: 0 2rem; */
+    box-shadow: 1px 2px 15px #2f2f2f;
   }
   .project-box-img img {
     width: 100%;
-    transition: all 0.3s ease;
-    /* filter: brightness(.5); */
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+    /* filter: brightness(.8); */
     min-width: 100%;
   }
   .project-box-img img:hover {
-    scale: 1.5;
+    scale: 1.2;
     filter: brightness(1);
   }
+  .project-box-img:hover {
+    z-index: 555;
+  }
+
   .project-box-desc {
     padding: 0 2rem;
-    /* height: 200px; */
+    text-align: justify;
+    height: 200px;
     /* background-color: rgb(146, 145, 144, 0.4); */
   }
 
@@ -666,6 +790,29 @@
   .project-box-action-box a:hover {
     background: linear-gradient(rgb(59, 81, 118), rgb(44, 88, 218));
   }
+  .project-progress-bar {
+    font-size: 10px;
+    padding: 2rem 0;
+    /* text-align: center; */
+    padding-left: 2rem;
+    background-color: rgba(147, 146, 147, 0.278);
+  }
+  .progress-bar-InProgress {
+    color: rgb(195, 71, 91);
+    background-color: rgba(195, 71, 92, 0.278);
+    padding: 2%;
+    border-radius: 5px;
+  }
+  .progress-bar-completed {
+    color: rgb(2, 117, 4);
+    background-color: rgba(2, 117, 4, 0.285);
+    padding: 2%;
+    border-radius: 5px;
+  }
+  /* #iFrameBox{
+    width: 100%;
+    height: 50vh;
+  } */
   /* ---------------- PROJECTS END HERE  */
 
   /*--------------------------- page wrapper  */
@@ -682,21 +829,30 @@
     background-color: aqua;
   }
   /*-------------------------- SIDE CONTENT  */
-  /* .side-content {
+  .side-content {
     background: repeating-linear-gradient(
       50deg,
       white,
       rgb(244, 241, 241),
       white
     );
-  } */
+    background: url(./assets/img/waves-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    /* background-size: 50%; */
+    backdrop-filter: blur(5px);
+  }
   .side-cont-wrapper {
-    /* background-color: rgb(173, 189, 230); */
+    background-color: rgba(0, 0, 0, 0.913);
+
     /* width: 30%; */
     flex: 1 1;
     padding: 2rem;
     /* line-height: 2rem; */
-    color: #2f2f2f;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -705,7 +861,25 @@
     height: 100vh;
   }
   .side-head-1 {
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-family: heading-text;
+    text-align: center;
+    font-size: 64px;
+    /* text-shadow: 9px 9px 25px   rgb(59, 81, 118); */
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    padding: 4rem 0;
+    /* color: rgb(59, 81, 118); */
+    background: linear-gradient(
+      45deg,
+      rgb(59, 81, 118),
+      rgb(59, 81, 118),
+      rgb(243, 144, 144) 20%,
+      rgb(59, 81, 118)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
   }
   .techskill-grp {
     display: grid;
@@ -738,5 +912,26 @@
     padding: 2rem;
     color: gray;
     font-size: 12px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+  /* -------------ScrollToTop00 */
+  .ScrollToTop {
+    background-color: rgba(47, 47, 47, 0.353);
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    position: fixed;
+    right: 25px;
+    z-index: 9999;
+    bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    filter: sepia(25px);
+  }
+  .ScrollToTop:hover {
+    background-color: rgba(47, 47, 47, 0.753);
+    scale: 1.2;
   }
 }

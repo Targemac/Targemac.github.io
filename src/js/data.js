@@ -56,6 +56,7 @@ const data = {
   work_experience: [],
   projects_done: [
     {
+      status: "completed",
       title: "User Management System",
       description:
         " A simple implementation of a CRUD operation for a user management system",
@@ -64,6 +65,7 @@ const data = {
       tech_used: ["ReactJS", "NodejS", "ExpressJS", "MongoDB"],
     },
     {
+      status: "InProgress",
       title: "weather app",
       description:
         " A simple implementation of a weather application using the free weather api",
@@ -72,6 +74,7 @@ const data = {
       tech_used: ["ReactJS", "NodejS", "ExpressJS", "weatherAPI"],
     },
     {
+      status: "completed",
       title: "Landing Page (Phoenix Store)",
       description: " A simple landing page",
       link: "",
@@ -79,6 +82,7 @@ const data = {
       tech_used: ["ReactJS", "NodejS", "ExpressJS"],
     },
     {
+      status: "completed",
       title: "Node Express API",
       description: "",
       link: "https://github.com/Targemac/NODE-EXPRESS-API",
@@ -86,6 +90,7 @@ const data = {
       tech_used: ["ReactJS", "NodejS", "ExpressJS", "UUID", "POSTMAN API"],
     },
     {
+      status: "InProgress",
       title: "movie search app",
       description: " A simple search engine for all your favourite movies",
       link: "",
@@ -93,6 +98,7 @@ const data = {
       tech_used: ["ReactJS", "NodejS", "ExpressJS", "movieDB API"],
     },
     {
+      status: "completed",
       title: "Book Store (CRUD Operation)",
       description: " A simple book store",
       link: "",
@@ -100,6 +106,7 @@ const data = {
       tech_used: ["ReactJS", "NodejS", "ExpressJS", "MySQL"],
     },
     {
+      status: "completed",
       title: "digital clock",
       description:
         "Designed and implemented a digital clock that can be embedded or used as a standalone in a website with HTML, CSS & JavaScript",
@@ -108,6 +115,7 @@ const data = {
       tech_used: ["html", "css", "javascript"],
     },
     {
+      status: "completed",
       title: "twitter bot",
       description:
         " Designed and implemented a random predefined tweet generator.",
@@ -116,6 +124,7 @@ const data = {
       tech_used: ["Twitter API", "NodeJS", "ExpressJS", "Lo-dash"],
     },
     {
+      status: "InProgress",
       title: "portfolio site",
       description: "Designed and implemented my portfolio website.",
       link: "",
