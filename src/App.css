@@ -122,13 +122,13 @@
     height: 100vh;
   }
   .PersonalSummary-sub-1 {
-    flex: 1 1 30rem;
+    /* flex: 1 1 30rem; */
     /* background-color: blueviolet; */
     padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: 4rem;
+    display: grid;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    row-gap: 2rem;
     /* align-items: center; */
     /* justify-content:space-evenly */
   }
