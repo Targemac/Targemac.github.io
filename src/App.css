@@ -127,6 +127,7 @@
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     row-gap: 4rem;
     /* align-items: center; */
     /* justify-content:space-evenly */
@@ -728,7 +729,6 @@
   .side-body {
     font-size: 16px;
     /* font-style: italic; */
-
   }
 
   /* ---------------------------FOOTER  */
