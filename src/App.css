@@ -59,6 +59,7 @@
   }
   .nav-box-2 a:hover {
     background: linear-gradient(rgb(195, 71, 91), rgb(238, 103, 125));
+    color: #2f2f2f;
   }
   a[download] {
     background: linear-gradient(rgb(2, 117, 4), rgb(5, 159, 8));
