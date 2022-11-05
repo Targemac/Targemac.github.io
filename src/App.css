@@ -127,7 +127,7 @@
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 4rem;
     /* align-items: center; */
     /* justify-content:space-evenly */
   }
@@ -200,8 +200,8 @@
     border-radius: 50%;
     border: solid 2px #ffffff;
     transition: all 0.3s ease-in-out;
-    background-color: rgb(250, 250, 250, 0.2);
-    backdrop-filter: blur(5px);
+    /* background-color: rgb(250, 250, 250, 0.2); */
+    /* backdrop-filter: blur(5px); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -728,7 +728,7 @@
   .side-body {
     font-size: 16px;
     /* font-style: italic; */
-    
+
   }
 
   /* ---------------------------FOOTER  */
