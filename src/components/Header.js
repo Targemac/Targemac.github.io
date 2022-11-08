@@ -3,8 +3,8 @@ import $ from "jquery";
 
 import {
   FaGithub,
-  FaLocationArrow,
-  FaInstagram,
+  // FaLocationArrow,
+  // FaInstagram,
   FaTwitter,
   FaLinkedin,
   FaEnvelope,
@@ -18,6 +18,9 @@ const Header = () => {
     $(".nav-box-2").slideToggle();
   };
 
+  // $(document.body).on('click', () => {
+  //   $(".nav-box-2").slideUp();
+  // })
   return (
     <>
       <header className="main-header">
@@ -32,9 +35,9 @@ const Header = () => {
           >
             <FaGithub />
           </a>
-          <a href="/" rel="noreferrer" target="_blank">
+          {/* <a href="/" rel="noreferrer" target="_blank">
             <FaInstagram />
-          </a>
+          </a> */}
           <a
             href="https://twitter.com/TargemaCharles"
             rel="noreferrer"
@@ -55,16 +58,16 @@ const Header = () => {
           <a href="tel:+2348097866451" rel="noreferrer" target="_blank">
             <FaPhone />
           </a>
-          <a href="/" rel="noreferrer" target="_blank">
+          {/* <a href="/" rel="noreferrer" target="_blank">
             <FaLocationArrow /> Abuja, Nigeria
-          </a>
+          </a> */}
           <a
             href="/"
             download="../assets/web-dev cv.pdf"
             rel="noreferrer"
             target="_blank"
           >
-            <FaDownload /> Download CV
+            <FaDownload />  CV
           </a>
         </nav>
         <div onClick={handleToggle} className="toggle-btn-box">
@@ -75,9 +78,12 @@ const Header = () => {
         <a href="https://github.com/Targemac" rel="noreferrer" target="_blank">
           <FaGithub /> Github
         </a>
-        <a href="/" rel="noreferrer" target="_blank">
-          <FaInstagram /> Instagram
+        <a href="https://github.com/Targemac" rel="noreferrer" target="_blank">
+          <FaGithub /> Github
         </a>
+        {/* <a href="/" rel="noreferrer" target="_blank">
+          <FaInstagram /> Instagram
+        </a> */}
         <a
           href="https://twitter.com/TargemaCharles"
           rel="noreferrer"
@@ -98,11 +104,11 @@ const Header = () => {
         <a href="tel:+2348097866451" rel="noreferrer" target="_blank">
           <FaPhone /> Phone
         </a>
-        <a href="/" rel="noreferrer" target="_blank">
+        {/* <a href="/" rel="noreferrer" target="_blank">
           <FaLocationArrow /> Abuja, Nigeria
-        </a>
+        </a> */}
         <a href="/" download="../assets/web-dev cv.pdf">
-          <FaDownload /> Download CV
+          <FaDownload />  CV
         </a>
       </nav>
     </>

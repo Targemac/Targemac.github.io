@@ -159,18 +159,23 @@
     width: 100%;
   }
   .p-s-s-1-btn button {
-    /* width: 50%; */
+    background-color: rgb(195, 71, 91);
+    margin: auto;
     font-size: 16px;
-    padding: 0.5rem 2rem;
     text-transform: capitalize;
-    color: white;
-    border: none;
-    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 0.5px solid;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
     cursor: pointer;
-    background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118));
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 3.275);
+    letter-spacing: 0.1em;
   }
   .p-s-s-1-btn button:hover {
-    background: linear-gradient(rgb(59, 81, 118), rgb(44, 88, 218));
+    scale: 1.1;
+    color: white;
+    background-color: rgb(59, 81, 118);
   }
 
   .PersonalSummary-sub-2 {
@@ -192,7 +197,7 @@
   /* LANGUAGES START */
   .languages {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
     justify-content: center;
     align-items: center;
@@ -218,7 +223,7 @@
   }
   .language {
     font-size: 28px;
-    color: rgb(44, 88, 218);
+    color: rgb(59, 81, 118);
   }
   /* .language:hover {
     transform: scale(1.5);
@@ -261,6 +266,7 @@
     /* display: flex; */
     /* flex-direction: column; */
     align-items: stretch;
+    width: 100%;
     border-radius: 15px;
     row-gap: 1.5rem;
     margin: 0 auto;
@@ -273,9 +279,10 @@
     font-size: 16px;
     font-weight: bold;
     text-transform: capitalize;
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
     /* display: block; */
-    height: 50px;
+    height: 20px;
+    /* background-color: rgba(180, 178, 178, 0.413); */
     color: rgb(59, 81, 118);
     overflow-inline: clip;
     text-overflow: ellipsis;
@@ -312,7 +319,7 @@
   }
 
   .project-box-desc {
-    padding: 0 2rem;
+    padding: 0 1rem;
     text-align: justify;
     height: 200px;
     /* background-color: rgb(146, 145, 144, 0.4); */
@@ -359,6 +366,81 @@
   }
   /* ---------------- PROJECTS END HERE  */
 
+  /*-------------------------- HIRE ME START HERE  */
+  .hire-me-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-wrap: wrap;
+    padding: 6rem 0;
+    row-gap: 2rem;
+  }
+  .hire-me-wrapper-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+    justify-content: center;
+    gap: 1rem;
+    /* background-color: rgb(255, 255, 255); */
+    /* padding: 1rem; */
+  }
+  .hire-me-wrapper-1-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 0.5px solid rgba(147, 146, 147, 0.278);
+    /* padding: 1rem 2rem; */
+    border-radius: 5px;
+    /* box-shadow: 0px -2px 25px rgb(180, 178, 178); */
+  }
+  .hire-me-wrapper-1-item-detail {
+    font-family: heading-text;
+    font-size: 4rem;
+    color: rgb(59, 81, 118);
+    /* background-color: rgb(255, 255, 255); */
+  }
+  .hire-me-wrapper-1-item-head {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(59, 81, 118);
+    background-color: rgba(147, 146, 147, 0.278);
+    padding: 1rem;
+  }
+  .hire-me-wrapper-2 {
+    display: grid;
+    row-gap: 2rem;
+    /* width: -40%; */
+    /* background-color: rgba(147, 146, 147, 0.278); */
+  }
+  .hire-me-wrapper-2 h1 {
+    margin: auto;
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-family: heading-text;
+    color: #2f2f2f;
+    text-align: center;
+  }
+  .hire-me-wrapper-2 a {
+    background-color: rgb(195, 71, 91);
+    margin: auto;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 0.5px solid;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 3.275);
+    letter-spacing: 0.1em;
+  }
+
+  .hire-me-wrapper-2 a:hover {
+    scale: 1.1;
+    color: white;
+    background-color: rgb(59, 81, 118);
+  }
+
+  /*-------------------------- HIRE ME END HERE  */
+
   /*--------------------------- page wrapper  */
   .page-wrapper {
     display: flex;
@@ -377,7 +459,8 @@
   } */
   .side-cont-wrapper {
     /* background-color: lightgray; */
-    /* width: 30%; */
+    width: 80%;
+    margin: 0 auto;
     height: 100vh;
     justify-content: center;
     flex: 1 1;
@@ -579,7 +662,7 @@
     flex-wrap: wrap-reverse;
     padding: 2rem 0;
     align-items: center;
-    /* height: 100vh; */
+    height: 100vh;
   }
   .PersonalSummary-sub-1 {
     flex: 1 1 30rem;
@@ -593,7 +676,9 @@
   }
   .p-s-s-1-title {
     font-size: 24px;
+    font-size: 4rem;
     text-transform: capitalize;
+    font-family: heading-text;
     /* background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118)); */
     /* font-weight: bold; */
     /* background-clip: text; */
@@ -610,22 +695,34 @@
     color: lightgray;
     font-size: 12px;
   }
+  .p-s-s-1-body-status {
+    color: grey;
+    display: flex;
+    gap: 1rem;
+    font-size: 12px;
+    font-style: italic;
+  }
   .p-s-s-1-btn {
     width: 100%;
   }
   .p-s-s-1-btn button {
-    /* width: 50%; */
+    background-color: rgb(195, 71, 91);
+    margin: auto;
     font-size: 16px;
-    padding: 0.5rem 2rem;
     text-transform: capitalize;
-    color: white;
-    border: none;
-    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 0.5px solid;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
     cursor: pointer;
-    background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118));
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 3.275);
+    letter-spacing: 0.1em;
   }
   .p-s-s-1-btn button:hover {
-    background: linear-gradient(rgb(59, 81, 118), rgb(44, 88, 218));
+    scale: 1.1;
+    color: white;
+    background-color: rgb(59, 81, 118);
   }
 
   .PersonalSummary-sub-2 {
@@ -668,7 +765,7 @@
   }
   .language {
     font-size: 60px;
-    color: rgb(44, 88, 218);
+    color: rgb(59, 81, 118);
   }
   .language:hover {
     transform: scale(1.2);
@@ -712,10 +809,10 @@
     background-color: white;
     /* display: flex; */
     /* flex-direction: column; */
-    align-items: stretch;
+    /* align-items: stretch; */
     border-radius: 15px;
     row-gap: 1.5rem;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     overflow: hidden;
   }
   .project-box > a {
@@ -727,7 +824,7 @@
     text-transform: capitalize;
     padding: 2rem 2rem;
     /* display: block; */
-    height: 50px;
+    /* height: 50px; */
     color: rgb(59, 81, 118);
     overflow-inline: clip;
     text-overflow: ellipsis;
@@ -764,56 +861,130 @@
   }
 
   .project-box-desc {
+    /* display: none; */
     padding: 0 2rem;
     text-align: justify;
     height: 200px;
     /* background-color: rgb(146, 145, 144, 0.4); */
   }
 
-  .project-box-action-box {
-    padding: 0 2rem;
-    width: 100%;
-  }
-  .project-box-action-box a {
-    width: 100%;
-    text-decoration: none;
-    /* font-size: 18px; */
-    padding: 0.5rem 2rem;
-    text-transform: capitalize;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    background: linear-gradient(rgb(44, 88, 218), rgb(59, 81, 118));
-    /* opacity: 0.8; */
-  }
-  .project-box-action-box a:hover {
-    background: linear-gradient(rgb(59, 81, 118), rgb(44, 88, 218));
-  }
   .project-progress-bar {
-    font-size: 10px;
+    font-size: 16px;
     padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
     /* text-align: center; */
-    padding-left: 2rem;
+    padding: 2rem;
     background-color: rgba(147, 146, 147, 0.278);
   }
   .progress-bar-InProgress {
     color: rgb(195, 71, 91);
-    background-color: rgba(195, 71, 92, 0.278);
+    /* background-color: rgba(195, 71, 92, 0.278); */
     padding: 2%;
     border-radius: 5px;
   }
   .progress-bar-completed {
     color: rgb(2, 117, 4);
-    background-color: rgba(2, 117, 4, 0.285);
+    /* background-color: rgba(2, 117, 4, 0.285); */
     padding: 2%;
     border-radius: 5px;
+  }
+  .see-more,
+  .close-more {
+    background-color: rgb(255, 255, 255);
+    padding: 2% 4%;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #2f2f2f;
+    /* border: 0.5px solid; */
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .close-more {
+    display: none;
+  }
+  .see-more:hover,
+  .close-more:hover {
+    background-color: rgb(59, 81, 118);
+    color: white;
   }
   /* #iFrameBox{
     width: 100%;
     height: 50vh;
   } */
   /* ---------------- PROJECTS END HERE  */
+
+  /*-------------------------- HIRE ME START HERE  */
+  .hire-me-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* background-color: aqua; */
+    /* background-color: rgba(147, 146, 147, 0.278); */
+    padding: 4rem 0;
+  }
+  .hire-me-wrapper-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+    justify-content: center;
+    gap: 1rem;
+    /* background-color: rgb(255, 255, 255); */
+    /* padding: 1rem; */
+  }
+  .hire-me-wrapper-1-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 0.5px solid rgba(147, 146, 147, 0.278);
+    /* padding: 1rem 2rem; */
+    border-radius: 5px;
+    /* box-shadow: 0px -2px 25px rgb(180, 178, 178); */
+  }
+  .hire-me-wrapper-1-item-detail {
+    font-family: heading-text;
+    font-size: 4rem;
+    color: rgb(59, 81, 118);
+    /* background-color: rgb(255, 255, 255); */
+  }
+  .hire-me-wrapper-1-item-head {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(59, 81, 118);
+    background-color: rgba(147, 146, 147, 0.278);
+    padding: 1rem;
+  }
+  .hire-me-wrapper-2 {
+    display: grid;
+    /* width: -40%; */
+    /* background-color: rgba(147, 146, 147, 0.278); */
+  }
+  .hire-me-wrapper-2 h1 {
+    margin: auto;
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-family: heading-text;
+    color: #2f2f2f;
+  }
+  .hire-me-wrapper-2 a {
+    background-color: rgb(195, 71, 91);
+    margin: auto;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 0.5px solid;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 3.275);
+    letter-spacing: 0.1em;
+  }
+
+  .hire-me-wrapper-2 a:hover {
+    scale: 1.1;
+    color: white;
+    background-color: rgb(59, 81, 118);
+  }
+
+  /*-------------------------- HIRE ME END HERE  */
 
   /*--------------------------- page wrapper  */
   .page-wrapper {
@@ -848,7 +1019,6 @@
   .side-cont-wrapper {
     background-color: rgba(0, 0, 0, 0.913);
 
-    /* width: 30%; */
     flex: 1 1;
     padding: 2rem;
     /* line-height: 2rem; */
@@ -885,7 +1055,8 @@
     display: grid;
     grid-template-columns: repeat(3, 25%);
     justify-items: center;
-    width: 100%;
+    margin: 0 auto;
+    width: 60%;
     justify-content: space-between;
     /* flex-wrap: wrap; */
     row-gap: 2rem;

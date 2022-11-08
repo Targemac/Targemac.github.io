@@ -1,8 +1,9 @@
 import React from "react";
-import data from "../js/data.js";
-import { FaCheckCircle, FaUpload } from "react-icons/fa";
-
-import movieAppPic from "../assets/img/project-img1.png";
+import {
+  FaCheckCircle,
+} from "react-icons/fa";
+// import $ from "jquery";
+import movieAppPic from "../assets/img/banner-bg.png";
 
 // const i_frame_style = {
 //   width: "100%",
@@ -10,8 +11,11 @@ import movieAppPic from "../assets/img/project-img1.png";
 //   overflow: "show",
 // };
 
-const Projects = () => {
-  const projects = data.projects_done;
+const Projects = (props) => {
+  const projects = props.projects;
+
+  
+
   return (
     <>
       <div className="projects">
@@ -43,10 +47,14 @@ const Projects = () => {
                 </a>
 
                 <div className="project-box-desc">
-                  {project.description ? project.description : "..."}
+                  {project.description
+                    ? project.description
+                    : "No description available"}
                   <ul>
                     {project.tech_used
-                      ? project.tech_used.map((tech) => <li>{tech} </li>)
+                      ? project.tech_used.map((tech, index) => (
+                          <li key={index}>{tech} </li>
+                        ))
                       : "..."}
                   </ul>
                 </div>
@@ -58,11 +66,13 @@ const Projects = () => {
                     </span>
                   ) : project.status === "InProgress" ? (
                     <span className="progress-bar-InProgress">
-                      <FaUpload /> In Progress...
+                      {/* <FaUpload /> */}
+                      In Progress
                     </span>
                   ) : (
                     ""
                   )}
+                  
                 </div>
               </div>
             );

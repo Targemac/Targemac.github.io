@@ -11,7 +11,7 @@ const data = {
   },
   photo: "../assets/img/tc.jpg",
   personal_summary:
-    "I am an enthusiastic Full-Stack Web Developer, with 2 years of experience in front-end and back-end web development. I have a good understanding of the Software Development Life Cycle, I strive for perfection and of course, I am a great team player. I look forward to putting my knowledge to work with the rest of the team.",
+    "My name is Charles Targema, I am an enthusiastic Full-Stack Web Developer from Nigeria, with 2 years of experience in front-end and back-end web development. I have a good understanding of the Software Development Life Cycle, I strive for perfection and of course, I am a great team player. I look forward to putting my knowledge to work with the rest of the team.",
   email: "",
   phone: "+2348097866451",
   address: "Abuja, Nigeria",
@@ -31,7 +31,7 @@ const data = {
     { id: 5, socialName: "Instagram", socialLink: "" },
   ],
   tech_skills: [
-    { id: 1, skillName: "front-end", list: ["HTML5", "CSS", "Javascript"] },
+    { id: 1, skillName: "front-end", list: ["HTML5", "CSS3", "Javascript"] },
     { id: 2, skillName: "back-end", list: ["NodeJS", "PHP", "Python"] },
     { id: 3, skillName: "framework", list: ["ReactJS"] },
     { id: 4, skillName: "database", list: ["MySQL", "MongoDB"] },
@@ -128,7 +128,7 @@ const data = {
       title: "portfolio site",
       description: "Designed and implemented my portfolio website.",
       link: "",
-      img: "..//assets/img/cv.png",
+      img: "ccjkhbvkjb",
       tech_used: [
         "ReactJS",
         "NodejS",
@@ -136,6 +136,15 @@ const data = {
         "movieDB API",
         "github pages",
       ],
+    },
+    {
+      status: "InProgress",
+      title: "quize app",
+      description:
+        "Designed and implemented question and answer quize application.",
+      link: "",
+      img: "",
+      tech_used: ["html", "css", "javascript", "jquery"],
     },
   ],
 };

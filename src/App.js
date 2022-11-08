@@ -12,6 +12,11 @@ import Languages from "./components/Languages";
 import IntroBanner from "./components/IntroBanner";
 import SideContent from "./components/SideContent";
 import ScrollToTop from "./components/ScrollToTop";
+import HireMe from "./components/HireMe";
+
+import data from "./js/data";
+const techSkills = data.tech_skills;
+const projects = data.projects_done;
 
 function App() {
   return (
@@ -19,12 +24,14 @@ function App() {
       <Header />
       <IntroBanner />
       <PersonalSummary />
-      <Projects />
+      <HireMe />
+      <SideContent techSkills={techSkills} />
+      <Projects projects={projects} />
       <Home />
-      <SideContent />
+      <HireMe />
       <Languages />
       <Footer />
-      <ScrollToTop/>
+      <ScrollToTop />
     </div>
   );
 }
