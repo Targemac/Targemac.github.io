@@ -15,6 +15,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import HireMe from "./components/HireMe";
 
 import data from "./js/data";
+import Faq from "./components/Faq";
 const techSkills = data.tech_skills;
 const projects = data.projects_done;
 
@@ -26,10 +27,11 @@ function App() {
       <PersonalSummary />
       <HireMe />
       <SideContent techSkills={techSkills} />
+      <Languages />
       <Projects projects={projects} />
       <Home />
       <HireMe />
-      <Languages />
+      <Faq />
       <Footer />
       <ScrollToTop />
     </div>

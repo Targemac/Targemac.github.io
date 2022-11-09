@@ -5,11 +5,6 @@ import {
 // import $ from "jquery";
 import movieAppPic from "../assets/img/banner-bg.png";
 
-// const i_frame_style = {
-//   width: "100%",
-//   height: "300px",
-//   overflow: "show",
-// };
 
 const Projects = (props) => {
   const projects = props.projects;
@@ -79,19 +74,7 @@ const Projects = (props) => {
           })}
         </div>
 
-        {/* <p>
-          <iframe
-            id="iFrameBox"
-              title=" my portfolio site"
-              style={{ i_frame_style }}
-              src="https://cv-tcdevengr.netlify.app/"
-              // width="100"
-              // height="100"
-              scrolling="yes"
-            >
-              my portfolio site
-            </iframe>
-          </p> */}
+     
       </div>
     </>
   );

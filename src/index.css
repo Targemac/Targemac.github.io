@@ -7,7 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #2f2f2f;
 }
-
+body,
+html {
+  scroll-behavior: smooth;
+  transition: all 0.5s ease;
+  
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

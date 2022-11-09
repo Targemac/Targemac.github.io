@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import data from "../js/data";
 import photo from "../assets/img/tc.jpg";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import $ from "jquery";
+import axios from "axios";
 
 const PersonalSummary = () => {
   // let stats = $(".p-s-s-1-body-status");
@@ -40,13 +41,29 @@ const PersonalSummary = () => {
   for (let i = 0; i < text.text().split(/[.,@-]/gi).length; i++) {
     num_symbols++;
   }
-  symbols.text(num_symbols + " Symbols"); 
+  symbols.text(num_symbols + " Symbols");
+
+  const [testData, setTestData] = useState("this is a sale test");
+
+  useEffect(() => {
+    const fetchTestData = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/");
+        setTestData(res.data.message);
+        // console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchTestData();
+  }, []);
 
   return (
     <div className="PersonalSummary">
       <div className="PersonalSummary-sub-1">
         <div className="p-s-s-1-title">get to know me</div>
         <div className="p-s-s-1-body" id="PersonalSummaryBody">
+          {/* <div>{testData}</div> */}
           <span className="custome-quote">
             <FaQuoteLeft />
           </span>{" "}

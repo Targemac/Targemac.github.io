@@ -10,7 +10,7 @@ import {
 
 const IntroBanner = () => {
   return (
-    <div className="IntroBanner">
+    <div className="IntroBanner" id="top">
       <div className="hobbies">
         <div className="hobbie">
           <FaBookReader />

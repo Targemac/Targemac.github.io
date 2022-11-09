@@ -141,7 +141,7 @@
     /* justify-content:space-evenly */
   }
   .p-s-s-1-title {
-    font-size: 24px;
+    font-size: 2rem;
     text-transform: capitalize;
     color: #2f2f2f;
   }
@@ -154,6 +154,13 @@
   .custome-quote {
     color: lightgray;
     font-size: 16px;
+  }
+  .p-s-s-1-body-status {
+    color: grey;
+    display: flex;
+    gap: 1rem;
+    font-size: 12px;
+    font-style: italic;
   }
   .p-s-s-1-btn {
     width: 100%;
@@ -207,6 +214,7 @@
     /* margin: 0 4rem; */
     /* height: 50vh; */
     gap: 2rem;
+    padding: 2rem;
   }
   .language {
     /* width: 200px; */
@@ -527,6 +535,57 @@
     /* letter-spacing: 0.2rem; */
     text-transform: capitalize;
   }
+  /* ---------------------------FAQ START */
+  .faq-wrapper {
+    /* display: flex; */
+    display: grid;
+    /* background-color: #2f2f2f12; */
+    box-shadow: 0px 0px 25px #2f2f2f6f;
+    /* padding: 5rem 0; */
+    row-gap: 2rem;
+    /* border: 0.5px solid; */
+    margin: 4rem 50px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .faq-head {
+    font-size: 4rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: heading-text;
+    text-align: center;
+    background-color: #2f2f2f;
+    color: white;
+    padding: 2rem 0;
+  }
+
+  .faq-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    gap: 4rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem 0;
+  }
+
+  .faq-body-item {
+    /* border: 0.5px solid #2f2f2f; */
+    padding: 1rem;
+    transition: all 1s ease-in-out;
+  }
+  .faq-body-question {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    display: flex;
+    column-gap: 0.5rem;
+  }
+  .faq-body-answer {
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  /* FAQ END */
   /* -------------ScrollToTop00 */
   .ScrollToTop {
     background-color: rgba(47, 47, 47, 0.353);
@@ -920,13 +979,14 @@
     /* background-color: aqua; */
     /* background-color: rgba(147, 146, 147, 0.278); */
     padding: 4rem 0;
+    margin: 4rem 50px;
   }
   .hire-me-wrapper-1 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 150px));
     justify-content: center;
-    gap: 1rem;
-    /* background-color: rgb(255, 255, 255); */
+    gap: 2rem;
+    /* background-color: rgb(179, 43, 43); */
     /* padding: 1rem; */
   }
   .hire-me-wrapper-1-item {
@@ -1084,8 +1144,61 @@
     color: gray;
     font-size: 12px;
     letter-spacing: 0.2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
+  /* ---------------------------FAQ START */
+  .faq-wrapper {
+    /* display: flex; */
+    display: grid;
+    /* background-color: #2f2f2f12; */
+    /* padding: 5rem 0; */
+    row-gap: 2rem;
+    /* border: 0.5px solid; */
+    /* margin: 0 50px; */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px #2f2f2f6f;
+    margin: 4rem 50px;
+    border-radius: 10px;
+  }
+  .faq-head {
+    font-size: 4rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: heading-text;
+    text-align: center;
+    background-color: #2f2f2f;
+    color: white;
+    padding: 2rem 0;
+  }
+
+  .faq-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    gap: 4rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem 0;
+  }
+
+  .faq-body-item {
+    /* border: 0.5px solid #2f2f2f; */
+    padding: 1rem;
+    transition: all 1s ease-in-out;
+  }
+  .faq-body-question {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    display: flex;
+    column-gap: 0.5rem;
+  }
+  .faq-body-answer {
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  /* FAQ END */
   /* -------------ScrollToTop00 */
   .ScrollToTop {
     background-color: rgba(47, 47, 47, 0.353);
