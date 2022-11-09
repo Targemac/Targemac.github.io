@@ -9,8 +9,8 @@ const Footer = () => {
     <div className="footer">
       <p> &copy;{data.date} Targema Charles. All rights reserved.</p>
 
-      <div id="location"></div>
-      <script src="../js/index.js"></script>
+      
+      
     </div>
   );
 };
