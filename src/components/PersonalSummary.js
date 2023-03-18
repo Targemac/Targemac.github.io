@@ -42,14 +42,11 @@ const PersonalSummary = () => {
   }
   symbols.text(num_symbols + " Symbols");
 
-  
-
   return (
     <div className="PersonalSummary">
       <div className="PersonalSummary-sub-1">
-        <div className="p-s-s-1-title">get to know me</div>
-        <div className="p-s-s-1-body" id="PersonalSummaryBody">
-          
+        <div className="p-s-s-1-title hidden">get to know me</div>
+        <div className="p-s-s-1-body hidden" id="PersonalSummaryBody">
           <span className="custome-quote">
             <FaQuoteLeft />
           </span>{" "}
@@ -65,7 +62,7 @@ const PersonalSummary = () => {
           <span id="symbols"></span>
         </div>
         <div className="p-s-s-1-btn">
-          <button>Hire me today</button>
+          <a href="mailto:tcdevengr@mail.com"><button>Hire me today</button></a>
         </div>
       </div>
       <div className="PersonalSummary-sub-2 ">

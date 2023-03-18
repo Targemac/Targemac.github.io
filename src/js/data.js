@@ -31,6 +31,7 @@ const data = {
     { id: 5, socialName: "Instagram", socialLink: "" },
   ],
   tech_skills: [
+    { id: 1, skillName: "Design", list: ["Figma"] },
     { id: 1, skillName: "front-end", list: ["HTML5", "CSS3", "Javascript"] },
     { id: 2, skillName: "back-end", list: ["NodeJS", "PHP", "Python"] },
     { id: 3, skillName: "framework", list: ["ReactJS"] },
@@ -59,7 +60,7 @@ const data = {
       status: "completed",
       title: "User Management System",
       description:
-        " A simple implementation of a CRUD operation for a user management system",
+        "A simple implementation of a CRUD operation for a user management system",
       link: "https://github.com/Targemac/NODE-EXPRESS-API",
       img: "",
       tech_used: ["ReactJS", "NodejS", "ExpressJS", "MongoDB"],

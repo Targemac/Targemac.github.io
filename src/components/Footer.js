@@ -3,14 +3,12 @@ import "../js/index.js";
 
 const Footer = () => {
   const data = {
-    date: 2022,
+    date: Date(),
+    year: "2023",
   };
   return (
     <div className="footer">
-      <p> &copy;{data.date} Targema Charles. All rights reserved.</p>
-
-      
-      
+      <p> &copy;{data.year} Targema Charles. All rights reserved.</p>
     </div>
   );
 };

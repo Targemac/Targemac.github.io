@@ -1,17 +1,32 @@
-import React from "react";
-import data from "../js/data";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+// import data from "../js/data";
 
-const HireMe = () => {
-  const projects_done = data.projects_done;
+const HireMe = ({ baseURL }) => {
+  // const projects_done = data.projects_done;
+  // let n_o_p = 0;
+  // for (let i = 0; i < projects_done.length; i++) {
+  //   n_o_p++;
+  // }
+  // const baseURL = props.baseURL;
+  const [n_o_p, setN_o_p] = useState([10]);
 
-  let n_o_p = 0;
-  for (let i = 0; i < projects_done.length; i++) {
-    n_o_p++;
-  }
+  useEffect(() => {
+    const getNOP = async () => {
+      try {
+        const response = await axios.get(`${baseURL}projects`);
+        setN_o_p(response.data.length);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    return () => {
+      getNOP();
+    };
+  }, [baseURL]);
 
   return (
     <div className="hire-me-wrapper">
-      {" "}
       <div className="hire-me-wrapper-1">
         <div className="hire-me-wrapper-1-item">
           <div className="hire-me-wrapper-1-item-detail">MERN</div>
@@ -32,7 +47,7 @@ const HireMe = () => {
       </div>
       <div className="hire-me-wrapper-2">
         <h1>hire me today</h1>
-        <a href="/">let's get started</a>
+        <a href="mailto:tcdevengr@gmail.com">let's get started</a>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ import HireMe from "./components/HireMe";
 import data from "./js/data";
 import Faq from "./components/Faq";
 const techSkills = data.tech_skills;
-const projects = data.projects_done;
+const baseURL = "http://localhost:5000/";
 
 function App() {
   return (
@@ -25,12 +25,12 @@ function App() {
       <Header />
       <IntroBanner />
       <PersonalSummary />
-      <HireMe />
+      <HireMe baseURL={baseURL} />
       <SideContent techSkills={techSkills} />
       <Languages />
-      <Projects projects={projects} />
+      <Projects baseURL={baseURL} />
       <Home />
-      <HireMe />
+      <HireMe baseURL={baseURL} />
       <Faq />
       <Footer />
       <ScrollToTop />

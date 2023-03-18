@@ -6,24 +6,22 @@ $("#drop-down-toggle").click(() => {
   // $(".main-drop-down").slideToggle();
 });
 
-$("#preview-btn").click(() => {
-  $("#preview-pane img ").slideToggle();
+// $("#preview-btn").click(() => {
+//   $("#preview-pane img ").slideToggle();
+// });
+
+const observer = new IntersectionObserver((enteries) => {
+  $.each(enteries, function (entry) {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.addClass("show");
+    } else {
+      entry.removeClass("show");
+    }
+  });
 });
 
-var x = document.getElementById("location");
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML =
-    "Latitude: " +
-    position.coords.latitude +
-    "<br>Longitude: " +
-    position.coords.longitude;
-}
-getLocation();
+const hiddenElements = $(".hidden");
+$.each(hiddenElements, (el) => {
+  observer.observe(el);
+});

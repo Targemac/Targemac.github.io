@@ -1,32 +1,54 @@
-import React from "react";
-import {
-  FaCheckCircle,
-} from "react-icons/fa";
-// import $ from "jquery";
+import React, { useState, useEffect } from "react";
+import { FaCheckCircle } from "react-icons/fa";
+// import axios from "axios";
 import movieAppPic from "../assets/img/banner-bg.png";
+import data from "../js/data";
+const { projects_done } = data;
 
+const Projects = ({ baseURL }) => {
+  // const [projects, setProjects] = useState([]);
+  // const url = "http://localhost:5000/";
 
-const Projects = (props) => {
-  const projects = props.projects;
-
-  
+  // useEffect(() => {
+  //   const getProjects = async () => {
+  //     try {
+  //       const response = await axios.get(`${baseURL}projects`);
+  //       // console.table(response);
+  //       setProjects(response.data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   // getProjects();
+  //   return () => {
+  //     getProjects();
+  //   };
+  // }, [baseURL]);
 
   return (
     <>
       <div className="projects">
         <div className="projects-head">projects</div>
         <div className="project-grp">
-          {projects.map((project, index) => {
+          {projects_done.map((project, index) => {
             return (
               <div key={index} className="project-box">
                 {project.img ? (
-                  <a href={project.link} target="_blank" rel="noreferrer">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="project-box-img">
-                      <img src={project.img} alt="" />
+                      <img src={project.project_image} alt="" />
                     </div>
                   </a>
                 ) : (
-                  <a href={project.link} target="_blank" rel="noreferrer">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="project-box-img">
                       <img src={movieAppPic} alt="" />
                     </div>
@@ -45,14 +67,17 @@ const Projects = (props) => {
                   {project.description
                     ? project.description
                     : "No description available"}
-                  <ul>
+                  ...
+                  <br /><br/>
+                 
                     {project.tech_used
                       ? project.tech_used.map((tech, index) => (
-                          <li key={index}>{tech} </li>
+                          <span key={index}>- {tech} </span>
                         ))
                       : "..."}
-                  </ul>
+                  
                 </div>
+                
 
                 <div className="project-progress-bar">
                   {project.status === "completed" ? (
@@ -67,14 +92,11 @@ const Projects = (props) => {
                   ) : (
                     ""
                   )}
-                  
                 </div>
               </div>
             );
           })}
         </div>
-
-     
       </div>
     </>
   );
