@@ -7,9 +7,13 @@
   font-size: 48px;
   padding: 2.5rem 0;
 }
+.benefits-grp {
+  display: grid;
+  gap: 4rem;
+}
 .benefit {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   /* background-color: rgb(162, 232, 77); */
 }
 .benefit-body {
@@ -47,10 +51,12 @@
 
 .benefit-image {
   /* background-color: aqua; */
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 .benefit-image img {
-  width: 90%;
-  height: 400px;
+  max-width: 100%;
+  /* width: 90%; */
+  /* height: 400px; */
+ /* aspect-ratio: 6/5; */
 }

@@ -7,3 +7,15 @@
   font-size: 48px;
   padding: 2.5rem 0;
 }
+@media screen and (max-width: 768px) {
+  .testimonial-wrapper {
+    color: #2a2a2a;
+    padding: 2rem;
+  }
+  .testimonial-header {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    padding: 2.5rem 0;
+  }
+}

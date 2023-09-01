@@ -1,12 +1,15 @@
 .landing-wrapper {
   /* background-color: rgb(63, 63, 158); */
-  height: 100vh;
+  /* height: 100vh; */
   background: url(../images/office1.jpg);
   background-size: contain;
 }
 .wrapper-overlay {
   background-color: rgba(0, 0, 0, 0.9);
-  height: 100vh;
+  /* height: 100vh; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: grid;
 }
 .landing-wrapper-header {
   /* height: 10vh; */
@@ -70,6 +73,7 @@
   background-color: rgb(255, 255, 255);
   color: rgb(8, 64, 148);
 }
+/* ------------------ */
 .intro {
   color: white;
   margin: 10rem auto;
@@ -78,6 +82,7 @@
   text-align: center;
   text-transform: capitalize;
   transition: all 0.5s ease-in-out;
+  /* border: 1px solid; */
 }
 .intro p:first-of-type {
   font-size: 48px;
